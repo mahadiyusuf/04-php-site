@@ -1,8 +1,8 @@
-# Prime Cleaners Ltd
+# Na Manzo Computer Center
 
 A small, multi-page website for a fictional cleaning business, built as a PHP 8 learning project. It demonstrates reusable page includes, data-driven service and team content, server-side form validation, and local JSON Lines storage for contact enquiries.
 
-> **Learning project:** The business details and contact address are illustrative. The messages page uses a hard-coded password for local practice only and is not suitable for protecting real or sensitive data.
+> **Learning project:** The business details are used for this local project. The messages page uses a hard-coded password for local practice only and is not suitable for protecting real or sensitive data.
 
 ## Features
 

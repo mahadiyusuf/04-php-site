@@ -20,7 +20,7 @@ require_once __DIR__ . '/includes/header.php';
             <h2>Friendly service. Thoughtful results.</h2>
         </div>
         <div class="prose">
-            <p>Prime Cleaners Ltd was created to make home cleaning feel personal, straightforward, and dependable. We listen to what matters to you, take care with the small details, and leave your space ready to enjoy.</p>
+            <p>Na Manzo Computer Center was created to make home cleaning feel personal, straightforward, and dependable. We listen to what matters to you, take care with the small details, and leave your space ready to enjoy.</p>
             <p>Every home is different. That is why we take time to understand your preferences and shape our cleaning around your needs, whether you are looking for regular help or a one-off reset.</p>
             <a class="text-link" href="contact.php">Tell us what you need <span aria-hidden="true">&rarr;</span></a>
         </div>
@@ -47,7 +47,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="section-heading">
             <p class="eyebrow">Meet the team</p>
             <h2>Good people, thoughtful service.</h2>
-            <p>Get to know the people who make every Prime Cleaners visit feel personal.</p>
+            <p>Get to know the people who make every Na Manzo Computer Center visit feel personal.</p>
         </div>
         <div class="card-grid">
             <?php foreach ($team as $member): ?>

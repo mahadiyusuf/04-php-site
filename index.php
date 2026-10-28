@@ -16,7 +16,7 @@ require_once __DIR__ . '/includes/header.php';
 <section class="section">
     <div class="container">
         <div class="section-heading">
-            <p class="eyebrow">The Prime Cleaners difference</p>
+            <p class="eyebrow">The Na Manzo Computer Center difference</p>
             <h2>More time for what matters</h2>
             <p>From a quick refresh to a thorough deep clean, our friendly team makes it easier to keep your home feeling its best.</p>
         </div>

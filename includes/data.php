@@ -50,7 +50,7 @@ $team = [
     [
         'name' => 'Amara Okafor',
         'role' => 'Founder & Managing Director',
-        'bio' => 'Amara started Prime Cleaners to bring thoughtful, dependable home care to local families.',
+        'bio' => 'Amara started Na Manzo Computer Center to bring thoughtful, dependable home care to local families.',
     ],
     [
         'name' => 'Daniel Mensah',
