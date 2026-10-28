@@ -9,11 +9,55 @@
     --color-mint: #eaf3ed;
     --color-cream: #f8f7f2;
     --color-white: #fff;
+    --color-border: #e8ede8;
+    --color-header-border: #edf0ed;
+    --color-input-border: #cfd9d1;
+    --color-hero-glow-one: rgb(200 225 207 / 75%);
+    --color-hero-glow-two: rgb(229 238 218 / 90%);
+    --color-hero-start: #f8f7f2;
+    --color-hero-end: #f3f6ef;
+    --color-callout-background: #194b39;
+    --color-callout-text: #fff;
+    --color-button-text: #fff;
+    --color-error: #a13e36;
+    --color-error-text: #7d2923;
+    --color-error-border: #e6b9b5;
+    --color-error-background: #fff3f1;
     --shadow-card: 0 16px 40px rgb(32 48 43 / 7%);
+}
+
+:root[data-theme='dark'] {
+    color-scheme: dark;
+    --color-ink: #e7eee9;
+    --color-muted: #afbbb3;
+    --color-green: #8fcba8;
+    --color-green-dark: #a7d8b8;
+    --color-mint: #263b30;
+    --color-cream: #1b2921;
+    --color-white: #121a16;
+    --color-border: #304137;
+    --color-header-border: #2a3930;
+    --color-input-border: #43584a;
+    --color-hero-glow-one: rgb(73 123 91 / 28%);
+    --color-hero-glow-two: rgb(87 111 71 / 22%);
+    --color-hero-start: #18251d;
+    --color-hero-end: #1d2b22;
+    --color-callout-background: #263b30;
+    --color-callout-text: #e7eee9;
+    --color-button-text: #102018;
+    --color-error: #f0a49c;
+    --color-error-text: #ffc2ba;
+    --color-error-border: #74433e;
+    --color-error-background: #382421;
+    --shadow-card: 0 16px 40px rgb(0 0 0 / 24%);
 }
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    background: var(--color-white);
 }
 
 body {
@@ -70,7 +114,7 @@ a {
     position: relative;
     z-index: 1;
     background: var(--color-white);
-    border-bottom: 1px solid #edf0ed;
+    border-bottom: 1px solid var(--color-header-border);
 }
 
 .header-content,
@@ -123,14 +167,47 @@ a {
     background: var(--color-mint);
 }
 
+.theme-toggle {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-ink);
+    background: var(--color-white);
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--color-green);
+    background: var(--color-mint);
+}
+
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--color-green);
+    outline-offset: 3px;
+}
+
+.theme-toggle-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
 .hero {
     display: flex;
     min-height: 570px;
     align-items: center;
     background:
-        radial-gradient(ellipse at 82% 25%, rgb(200 225 207 / 75%), transparent 29%),
-        radial-gradient(ellipse at 92% 78%, rgb(229 238 218 / 90%), transparent 34%),
-        linear-gradient(115deg, #f8f7f2 0%, #f3f6ef 100%);
+        radial-gradient(ellipse at 82% 25%, var(--color-hero-glow-one), transparent 29%),
+        radial-gradient(ellipse at 92% 78%, var(--color-hero-glow-two), transparent 34%),
+        linear-gradient(115deg, var(--color-hero-start) 0%, var(--color-hero-end) 100%);
 }
 
 .hero-content {
@@ -166,7 +243,7 @@ a {
     padding: 0.75rem 1.4rem;
     border: 2px solid var(--color-green);
     border-radius: 999px;
-    color: var(--color-white);
+    color: var(--color-button-text);
     background: var(--color-green);
     font-weight: 700;
     text-decoration: none;
@@ -208,7 +285,7 @@ a {
 
 .card {
     padding: 2rem;
-    border: 1px solid #e8ede8;
+    border: 1px solid var(--color-border);
     border-radius: 18px;
     background: var(--color-white);
     box-shadow: var(--shadow-card);
@@ -229,8 +306,8 @@ a {
 
 .callout {
     padding-block: 3.5rem;
-    color: var(--color-white);
-    background: var(--color-green-dark);
+    color: var(--color-callout-text);
+    background: var(--color-callout-background);
 }
 
 .callout-content {
@@ -251,7 +328,7 @@ a {
 .button-light {
     flex-shrink: 0;
     border-color: var(--color-white);
-    color: var(--color-green-dark);
+    color: var(--color-ink);
     background: var(--color-white);
 }
 
@@ -396,7 +473,7 @@ a {
 }
 
 .form-field label span[aria-hidden="true"] {
-    color: #a13e36;
+    color: var(--color-error);
 }
 
 .form-field .optional,
@@ -412,7 +489,7 @@ a {
     width: 100%;
     min-height: 48px;
     padding: 0.75rem 0.9rem;
-    border: 1px solid #cfd9d1;
+    border: 1px solid var(--color-input-border);
     border-radius: 10px;
     color: var(--color-ink);
     background: var(--color-white);
@@ -432,7 +509,7 @@ a {
 }
 
 .form-field [aria-invalid="true"] {
-    border-color: #a13e36;
+    border-color: var(--color-error);
 }
 
 .field-hint,
@@ -441,7 +518,7 @@ a {
 }
 
 .field-error {
-    color: #a13e36;
+    color: var(--color-error);
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -460,9 +537,9 @@ a {
 }
 
 .form-alert-error {
-    border-color: #e6b9b5;
-    color: #7d2923;
-    background: #fff3f1;
+    border-color: var(--color-error-border);
+    color: var(--color-error-text);
+    background: var(--color-error-background);
 }
 
 .messages-container {
@@ -472,7 +549,7 @@ a {
 .messages-login {
     max-width: 480px;
     padding: 2rem;
-    border: 1px solid #e8ede8;
+    border: 1px solid var(--color-border);
     border-radius: 18px;
     box-shadow: var(--shadow-card);
 }
@@ -520,7 +597,7 @@ a {
 
 .messages-table-wrap {
     overflow-x: auto;
-    border: 1px solid #e8ede8;
+    border: 1px solid var(--color-border);
     border-radius: 14px;
     box-shadow: var(--shadow-card);
 }
@@ -535,7 +612,7 @@ a {
 .messages-table th,
 .messages-table td {
     padding: 1rem;
-    border-bottom: 1px solid #edf0ed;
+    border-bottom: 1px solid var(--color-header-border);
     vertical-align: top;
 }
 
@@ -579,7 +656,7 @@ a {
 
 .site-footer {
     padding-block: 1.5rem;
-    border-top: 1px solid #edf0ed;
+    border-top: 1px solid var(--color-header-border);
     background: var(--color-white);
 }
 
@@ -619,6 +696,10 @@ a {
         width: 100%;
         justify-content: space-between;
         gap: 0;
+    }
+
+    .theme-toggle {
+        align-self: flex-end;
     }
 
     .site-nav a {

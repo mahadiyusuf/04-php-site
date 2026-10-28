@@ -7,6 +7,7 @@ A small, multi-page website for a fictional cleaning business, built as a PHP 8 
 ## Features
 
 - Shared site configuration, header, navigation, and footer
+- Light and dark themes with a persistent, accessible theme toggle
 - Responsive home, about, services, and contact pages
 - Services and team members rendered from PHP arrays
 - Individual service detail pages with a friendly 404 for unknown slugs

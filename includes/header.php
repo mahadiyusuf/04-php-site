@@ -12,7 +12,21 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?= e($tagline) ?>">
     <title><?= e($pageTitle) ?> | <?= e($siteName) ?></title>
+    <script>
+        (() => {
+            try {
+                const savedTheme = localStorage.getItem('site-theme');
+                const theme = savedTheme === 'light' || savedTheme === 'dark'
+                    ? savedTheme
+                    : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.dataset.theme = theme;
+            } catch {
+                document.documentElement.dataset.theme = 'light';
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/theme-toggle.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -31,6 +45,10 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                     ><?= e($label) ?></a>
                 <?php endforeach; ?>
             </nav>
+            <button class="theme-toggle" type="button" aria-pressed="false">
+                <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+                <span class="theme-toggle-label">Dark mode</span>
+            </button>
         </div>
     </header>
     <main>
