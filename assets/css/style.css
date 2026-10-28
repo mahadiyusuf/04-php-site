@@ -465,6 +465,118 @@ a {
     background: #fff3f1;
 }
 
+.messages-container {
+    max-width: 1120px;
+}
+
+.messages-login {
+    max-width: 480px;
+    padding: 2rem;
+    border: 1px solid #e8ede8;
+    border-radius: 18px;
+    box-shadow: var(--shadow-card);
+}
+
+.messages-login h2 {
+    font-size: 1.65rem;
+}
+
+.messages-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.messages-heading h2 {
+    margin-bottom: 0;
+}
+
+.count-badge {
+    display: inline-flex;
+    min-width: 2rem;
+    min-height: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.35rem;
+    padding-inline: 0.55rem;
+    border-radius: 999px;
+    color: var(--color-green-dark);
+    background: var(--color-mint);
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.button-outline {
+    margin-top: 0;
+    color: var(--color-green);
+    background: transparent;
+}
+
+.button-outline:hover {
+    color: var(--color-white);
+}
+
+.messages-table-wrap {
+    overflow-x: auto;
+    border: 1px solid #e8ede8;
+    border-radius: 14px;
+    box-shadow: var(--shadow-card);
+}
+
+.messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-white);
+    text-align: left;
+}
+
+.messages-table th,
+.messages-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #edf0ed;
+    vertical-align: top;
+}
+
+.messages-table th {
+    color: var(--color-green-dark);
+    background: var(--color-cream);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.messages-table td {
+    color: var(--color-muted);
+    font-size: 0.92rem;
+}
+
+.messages-table td a {
+    color: var(--color-green);
+}
+
+.messages-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.message-cell {
+    min-width: 220px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.empty-state {
+    padding: 2.5rem;
+    border-radius: 18px;
+    background: var(--color-cream);
+    text-align: center;
+}
+
+.empty-state p {
+    margin-bottom: 0;
+    color: var(--color-muted);
+}
+
 .site-footer {
     padding-block: 1.5rem;
     border-top: 1px solid #edf0ed;
