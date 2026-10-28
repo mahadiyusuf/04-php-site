@@ -200,6 +200,12 @@ a {
     gap: 1.25rem;
 }
 
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
 .card {
     padding: 2rem;
     border: 1px solid #e8ede8;
@@ -294,8 +300,44 @@ a {
 }
 
 .service-card h2 {
-    min-height: 2.8em;
+    margin-bottom: 0.75rem;
     font-size: 1.45rem;
+}
+
+.service-icon {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.service-price {
+    margin: 1.25rem 0 0;
+    color: var(--color-green-dark);
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.team-role {
+    margin-bottom: 0.8rem;
+    color: var(--color-green);
+    font-weight: 700;
+}
+
+.service-detail {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    align-items: start;
+    gap: 2rem;
+    max-width: 800px;
+}
+
+.service-detail .service-icon {
+    font-size: 4rem;
+}
+
+.service-detail h2 {
+    font-size: 1.8rem;
 }
 
 .service-card ul,
@@ -400,6 +442,10 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
     .callout-content,
     .footer-content {
         align-items: flex-start;
@@ -416,8 +462,9 @@ a {
         gap: 1.5rem;
     }
 
-    .service-card h2 {
-        min-height: auto;
+    .service-detail {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 }
 

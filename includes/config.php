@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 $siteName = 'Prime Cleaners Ltd';
 $tagline = 'A fresher home starts with a cleaner touch.';
 $contactEmail = 'hello@primecleaners.example';

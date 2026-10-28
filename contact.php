@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 $pageTitle = 'Contact';
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/header.php';
@@ -16,7 +18,7 @@ require_once __DIR__ . '/includes/header.php';
             <p class="eyebrow">Get in touch</p>
             <h2>We’re just an email away.</h2>
             <p>For a quote or more information about our cleaning services, send us a message. We’ll get back to you as soon as we can.</p>
-            <a class="contact-email" href="mailto:<?= htmlspecialchars($contactEmail, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($contactEmail, ENT_QUOTES, 'UTF-8') ?></a>
+            <a class="contact-email" href="mailto:<?= e($contactEmail) ?>"><?= e($contactEmail) ?></a>
         </div>
         <aside class="contact-note">
             <h3>Helpful details to include</h3>
